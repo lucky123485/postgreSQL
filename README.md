@@ -1,30 +1,53 @@
 # **PostgreSQL**<a id="docs-internal-guid-284870f4-7fff-2c24-7615-c3f2db4301e6"></a>
 
-\
+# Table of Contents
+1. [Introduction to PostgreSQL](#introduction-to-postgresql)
+   - [What is PostgreSQL?](#what-is-postgresql)
+   - [History of PostgreSQL](#history-of-postgresql)
+   - [Features of PostgreSQL](#features-of-postgresql)
+2. [Setting up PostgreSQL](#setup-postgresql)
+   - [Installation](#installation)
+   - [Checking PostgreSQL Version](#checking-postgresql-version)
+   - [Accessing PostgreSQL Database](#accessing-postgresql-database)
+   - [Creating and Managing Databases](#creating-and-managing-databases)
+3. [Tables and Schemas](#tables-and-schemas)
+   - [Creating Tables](#creating-tables)
+   - [Listing Tables](#listing-tables)
+   - [Inserting, Updating, and Deleting Data](#inserting-updating-and-deleting-data)
+4. [Views, Joins, and Functions](#views-joins-and-functions)
+   - [Views](#views)
+   - [Joins](#joins)
+   - [Aggregate Functions](#aggregate-functions)
+   - [User-Defined Functions and Triggers](#user-defined-functions-and-triggers)
+5. [Additional SQL Operations](#additional-sql-operations)
+   - [Indexes, Arrays, and Enumerations](#indexes-arrays-and-enumerations)
+   - [Logical Operators and String Functions](#logical-operators-and-string-functions)
 
 
 
 # **What is postgreSQL?**
 
-## **1**.It is a powerful,open source object-Rational database management System(ORDBMS)     **2**.It is used to store data securely
+**1**.It is a powerful,open source object-Rational database management System(ORDBMS)
 
-**3**.It is developed by the PostgresSQL Global development Group(a team of       volunteers).It is not controlled by any corporation or other private entity.
+**2**.It is used to store data securely
 
-  **History of postgreSQL**
+**3**.It is developed by the PostgresSQL Global development Group(a team of       volunteers).It is not controlled by any corporation or other private entity.
 
- **** It was started in 1986 by professor Stonebreaker as a follow up project.PostgresSQL is now the most advanced open-source database available anywhere.
+**History of postgreSQL**
 
-                                         
+It was started in 1986 by professor Stonebreaker as a follow up project.PostgresSQL is now the most advanced open-source database available anywhere.
 
-    **Features of postgreSQL?**
+                                         
 
- **1.** It runs on all major  as like -Linux,Unix and windows
+**Features of postgreSQL?**
 
-  **2**.It supports text,image,sound,video and include interface for many language like-c,c++             java etc.
+ **1.** It runs on all major  as like -Linux,Unix and windows
 
-  **3** It supports a lot of features of sql like-complex sql queries,foreign    key,triggers,view,transations and concurrency etc.
+ **2**.It supports text,image,sound,video and include interface for many language like-c,c++, java etc.
 
-  **4.**In postgresql tables can be set to inherit their characteristics from a “parent” table.
+ **3** It supports a lot of features of sql like-complex sql queries,foreign    key,triggers,view,transations and concurrency etc.
+
+**4.** In postgresql tables can be set to inherit their characteristics from a “parent” table.
 
 
 ## **Setup PostgreSQL:**
@@ -33,31 +56,31 @@ sudo apt update
 
 **Output-**
 
-Hit:1 http\://packages.microsoft.com/repos/code stable InRelease                                                                                                                                        
+Hit:1 http\://packages.microsoft.com/repos/code stable InRelease                                                                                                                                        
 
-Hit:2 http\://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                               
+Hit:2 http\://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                               
 
-Get:3 http\://security.ubuntu.com/ubuntu jammy-security InRelease \[110 kB]                                                                        
+Get:3 http\://security.ubuntu.com/ubuntu jammy-security InRelease \[110 kB]                                                                        
 
-Hit:4 https\://dl.google.com/linux/chrome/deb stable InRelease                                                                                    
+Hit:4 https\://dl.google.com/linux/chrome/deb stable InRelease                                                                                    
 
-Get:5 http\://in.archive.ubuntu.com/ubuntu jammy-updates InRelease \[119 kB]                                                                                                          
+Get:5 http\://in.archive.ubuntu.com/ubuntu jammy-updates InRelease \[119 kB]                                                                                                          
 
-Hit:6 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease                                                                                                                           
+Hit:6 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease                                                                                                                           
 
-Hit:8 http\://in.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                                                          
+Hit:8 http\://in.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                                                          
 
-Get:7 https\://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu\_22.04  InRelease \[1,262 B]
+Get:7 https\://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu\_22.04  InRelease \[1,262 B]
 
-Ign:9 https\://pkg.jenkins.io/debian-stable binary/ InRelease    
+Ign:9 https\://pkg.jenkins.io/debian-stable binary/ InRelease    
 
-Hit:10 https\://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                                            
+Hit:10 https\://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                                            
 
-Err:11 http\://pkg.jenkins.io/debian-stable binary/ Release.gpg                                                                                                                                         
+Err:11 http\://pkg.jenkins.io/debian-stable binary/ Release.gpg                                                                                                                                         
 
-  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
+  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 
-Fetched 230 kB in 7s (33.1 kB/s)                                                                                                                                                                       
+Fetched 230 kB in 7s (33.1 kB/s)                                                                                                                                                                       
 
 Reading package lists... Done
 
@@ -71,7 +94,7 @@ N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository
 
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https\://pkg.jenkins.io/debian-stable binary/ Release: The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 
-W: Failed to fetch http\://pkg.jenkins.io/debian-stable/binary/Release.gpg  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
+W: Failed to fetch http\://pkg.jenkins.io/debian-stable/binary/Release.gpg  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 
 W: Some index files failed to download. They have been ignored, or old ones used instead**.**
 
@@ -87,7 +110,7 @@ Reading state information... Done
 
 Suggested packages:
 
- postgresql-doc
+ postgresql-doc
 
 The following NEW packages will be installed:
 
@@ -103,7 +126,7 @@ Ign:1 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql
 
 Get:1 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql all 16+256.pgdg22.04+1 \[68.9 kB]
 
-Fetched 68.9 kB in 47s (1,462 B/s)    
+Fetched 68.9 kB in 47s (1,462 B/s)    
 
 Selecting previously unselected package postgresql.
 
@@ -147,33 +170,33 @@ Type "help" for help.
 
 **To see available list of database -**
 
- \l
+ \l
 
 **Output**
 
-                                                List of databases
+                                                List of databases
 
-Name |  Owner   | Encoding | Locale Provider | Collate | Ctype | ICU Locale | ICU Rules |   Access privileges   
+Name |  Owner   | Encoding | Locale Provider | Collate | Ctype | ICU Locale | ICU Rules |   Access privileges   
 
 \-------------+----------+----------+-----------------+---------+-------+------------+-----------+-----------------------
 
- employee | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
+ employee | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
- google  | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
+ google  | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
- keenable | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
+ keenable | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
- postgres | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
+ postgres | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
- techonology | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
+ techonology | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
- template0   | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       | =c/postgres      +
+ template0   | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       | =c/postgres      +
 
-          |      |      |             |     |   |        |       | postgres=CTc/postgres
+          |      |      |             |     |   |        |       | postgres=CTc/postgres
 
- template1   | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       | =c/postgres      +
+ template1   | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       | =c/postgres      +
 
-          |      |      |             |     |   |        |       | postgres=CTc/postgres
+          |      |      |             |     |   |        |       | postgres=CTc/postgres
 
 **\ :** The backslash () commands are specific to the psql command-line tool and provide a convenient way to interact with the PostgreSQL database.
 
@@ -197,7 +220,7 @@ CREATE DATABASE
 
 **To Switch other database-**
 
- \c\<db name>
+ \c\<db name>
 
 **Output-**
 
@@ -207,7 +230,7 @@ You are now connected to database "company" as user "postgres".
 
 company=#
 
-**\c:**The `\c` command is a way of saying, "I want to connect to a different database." It's like walking into a different room to chat about a specific topic.
+**\c:** The `\c` command is a way of saying, "I want to connect to a different database." It's like walking into a different room to chat about a specific topic.
 
 **How to delete database-**
 
@@ -245,7 +268,7 @@ company=**#**
 
 **create table employee**:This is the new table name.
 
-**Id:**This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
+**Id:** This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
 
 **Fname text not null**:This line creates a column named "fname.the `TEXT` data type is used to store character strings of any length
 
@@ -261,13 +284,13 @@ age int not null:Creates a column for the age of the employee using the "int" da
 
 company=# \d
 
-       List of relations
+       List of relations
 
- Schema |   Name   | Type  |  Owner   
+ Schema |   Name   | Type  |  Owner   
 
 \--------+----------+-------+----------
 
- public | employee | table | postgres
+ public | employee | table | postgres
 
 (1 row)
 
@@ -281,19 +304,19 @@ company=# \d
 
 company=# \d employee;
 
-           Table "public.employee"
+           Table "public.employee"
 
- Column |  Type   | Collation | Nullable | Default
+ Column |  Type   | Collation | Nullable | Default
 
 \--------+---------+-----------+----------+---------
 
- id | integer |       | not null |
+ id | integer |       | not null |
 
- fname  | text |       | not null |
+ fname  | text |       | not null |
 
- lname  | text |       | not null |
+ lname  | text |       | not null |
 
- age | integer |       | not null |
+ age | integer |       | not null |
 
 Indexes:
 
@@ -339,9 +362,9 @@ INSERT 0 1
 
 company=#
 
- **Insert into:** This statement is used in SQL to add new records (rows) into a table.
+ **Insert into:** This statement is used in SQL to add new records (rows) into a table.
 
- **employee:** employee is the name of the table.
+ **employee:** employee is the name of the table.
 
 **Values:** It indicates that you are about to provide the values for the columns.
 
@@ -353,11 +376,11 @@ Select \* from \<table name>
 
 company=# select \* from employee;
 
- id | fname | lname  | age
+ id | fname | lname  | age
 
 \----+-------+--------+-----
 
-  1 | Rahul | Sharma |  28
+  1 | Rahul | Sharma |  28
 
 (1 row)
 
@@ -379,11 +402,11 @@ Select id,fname,lname from employee;
 
 company=# select id,fname,lname from employee;
 
- id | fname | lname  
+ id | fname | lname  
 
 \----+-------+--------
 
-  1 | Rahul | Sharma
+  1 | Rahul | Sharma
 
 (1 row)
 
@@ -435,17 +458,17 @@ select \* from employee where age>=28;
 
 company=# select \* from employee where age>=28;
 
- id | fname | lname  | age
+ id | fname | lname  | age
 
 \----+-------+--------+-----
 
-  1 | lucky | sharma |  28
+  1 | lucky | sharma |  28
 
 `SELECT * FROM employee`: Specifies that you want to retrieve data from the "employee" table. The `*` means you want to retrieve all columns.
 
 `WHERE age >= 28`: Acts as a condition. It says, "Retrieve only the rows where the value in the 'age' column is greater than or equal to 28."
 
-**ORDER BY Clause-** 
+**ORDER BY Clause-** 
 
 It is used in SELECT statements to sort the result set based on one or more columns. Like- asc desc.
 
@@ -455,17 +478,17 @@ select \* from employee order by age asc;
 
 company=# select \* from employee order by age asc;
 
- id |  fname  |  lname  | age
+ id |  fname  |  lname  | age
 
 \----+---------+---------+-----
 
-  2 | rahul   | kaushik |  22
+  2 | rahul   | kaushik |  22
 
-  1 | lucky   | sharma  |  28
+  1 | lucky   | sharma  |  28
 
-  3 | neeraj  | garg |  33
+  3 | neeraj  | garg |  33
 
-  4 | brijesh | yadav   |  34
+  4 | brijesh | yadav   |  34
 
 (4 rows)
 
@@ -491,7 +514,7 @@ alter table employees add column salery int;
 
 company=# select \* from employees;
 
- id |  fname  |  lname  | ages | salery
+ id |  fname  |  lname  | ages | salery
 
 **ALTER TABLE**: This phrase is used to modify an existing table structure.
 
@@ -503,7 +526,7 @@ company=# select \* from employees;
 
 **int:**`INT` stands for "integer," and it is a data type in databases used to store whole numbers.
 
-**Rename column:** 
+**Rename column:** 
 
 To rename a column, use the ALTER TABLE statement with the RENAME COLUMN clause.
 
@@ -513,7 +536,7 @@ Output-
 
 company=# select \* from employees;
 
- id |  fname  |  lname  | ages | hours
+ id |  fname  |  lname  | ages | hours
 
 \----+---------+---------+------+-------
 
@@ -593,7 +616,7 @@ In a cross join, every row from the first table is combined with every row from 
 
 select name,fname from student cross join employee;
 
-**Full outer join:** 
+**Full outer join:** 
 
 A FULL OUTER JOIN returns all rows when there is a match in either the left or the right table. If there is no match, NULL values are returned for columns from the table without a match.
 
@@ -613,15 +636,15 @@ select sum(salery) from new\_employee;
 
 company=# select sum(salery) from new\_employee;
 
-  sum   
+  sum   
 
 \--------
 
- 127000
+ 127000
 
 **Avg-**
 
- Calculates the average (mean) of values in a numeric column
+ Calculates the average (mean) of values in a numeric column
 
 select avg(salery) from new\_employee;
 
@@ -629,15 +652,15 @@ select avg(salery) from new\_employee;
 
 company=# select avg(salery) from new\_employee;
 
-     avg     
+     avg     
 
 \--------------------
 
- 31750.000000000000
+ 31750.000000000000
 
 **Max-**
 
- ****Finds the highest value in a column.
+ ****Finds the highest value in a column.
 
 select max(salery) from new\_employee;
 
@@ -645,11 +668,11 @@ select max(salery) from new\_employee;
 
 company=# select max(salery) from new\_employee;
 
-  max  
+  max  
 
 \-------
 
- 59000
+ 59000
 
 (1 row)
 
@@ -663,11 +686,11 @@ select min(salery) from new\_employee;
 
 company=# select min(salery) from new\_employee;
 
- min  
+ min  
 
 \------
 
- 8000
+ 8000
 
 **Count-**
 
@@ -679,11 +702,11 @@ select count(salery) from new\_employee;
 
 company=# select count(salery) from new\_employee;
 
- count
+ count
 
 \-------
 
-  4
+  4
 
 (1 row)
 
@@ -702,11 +725,11 @@ select max(salery) as max\_salery from new\_employee;
 
 company=# select max(salery) as max\_salery from new\_employee;
 
- max\_salery
+ max\_salery
 
 \------------
 
-   59000
+   59000
 
 (1 row)
 
@@ -740,17 +763,17 @@ NOT (logical NOT)
 
 **And Operator:**And" is a logical operator used in programming and Boolean logic to combine two conditions. It returns true only if both conditions are true.
 
- select \* from student where name='rajnish' and age=33;
+ select \* from student where name='rajnish' and age=33;
 
 **Output-**
 
 company=# select \* from student where name='rajnish' and age=33;
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
 **OR Operator:**The OR operator is used to combine multiple conditions in a SQL statement. It returns true if at least one of the conditions joined by OR is true.
 
@@ -760,11 +783,11 @@ select \* from student where name='shyam' or age=40;
 
 company=# select \* from student where name='shyam' or age=40;
 
- id | name  | age
+ id | name  | age
 
 \----+-------+-----
 
-  2 | shyam |  22
+  2 | shyam |  22
 
 (1 row)
 
@@ -776,15 +799,15 @@ select \* from student where name is not null;
 
 company=# select \* from student where name is not null;
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
-  2 | shyam   |  22
+  2 | shyam   |  22
 
-  3 | gaurav  |  22
+  3 | gaurav  |  22
 
 (3 rows)
 
@@ -796,11 +819,11 @@ select \* from student where name like 'ra%';
 
 company=# select \* from student where name like 'ra%';
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
 (1 row)
 
@@ -812,15 +835,15 @@ select \* from student where age in(33,22,22);
 
 company=# select \* from student where age in(33,22,22);
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
-  2 | shyam   |  22
+  2 | shyam   |  22
 
-  3 | gaurav  |  22
+  3 | gaurav  |  22
 
 (3 rows)
 
@@ -832,15 +855,15 @@ select \* from student where age not in(21,67,45);
 
 **company=# select \* from student where age not in(21,67,45);**
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
-  2 | shyam   |  22
+  2 | shyam   |  22
 
-  3 | gaurav  |  22
+  3 | gaurav  |  22
 
 (3 rows)
 
@@ -850,15 +873,15 @@ select \* from student where age between 21 and 40;
 
 company=# select \* from student where age between 21 and 40;
 
- id |  name   | age
+ id |  name   | age
 
 \----+---------+-----
 
-  1 | rajnish |  33
+  1 | rajnish |  33
 
-  2 | shyam   |  22
+  2 | shyam   |  22
 
-  3 | gaurav  |  22
+  3 | gaurav  |  22
 
 (3 rows)
 
@@ -872,27 +895,27 @@ select concat('hello','world','hi');
 
 company=# select concat('hello','world','hi');
 
-concat    
+concat    
 
 \--------------
 
- helloworldhi
+ helloworldhi
 
 (1 row)
 
 **Length:"**Length" is a function in programming and databases that returns the number of characters in a string or the number of elements in a collection, providing the size or length of the data.
 
- select length('hello');
+ select length('hello');
 
 **Output-**
 
 company=# select length('hello');
 
- length
+ length
 
 \--------
 
-   5
+   5
 
 (1 row)
 
@@ -904,21 +927,21 @@ select lower('HELLO');
 
 **company=# select lower('HELLO');**
 
- ****lower
+ ****lower
 
 \-------
 
- helo 
+ helo 
 
 **Upper:** Converts a string to uppercase.
 
 company=# select upper('hello') as upparcase;
 
- upparcase
+ upparcase
 
 \-----------
 
- HELLO
+ HELLO
 
 **Position:**Position" is a function in programming and databases that identifies the starting position of a substring within a string, helping to locate specific text or characters.
 
@@ -928,19 +951,19 @@ select position('ha' in 'bhavesh')
 
 company=# select position('ha' in 'bhavesh');
 
- position
+ position
 
 \----------
 
-     2
+     2
 
 **Ascii:** Returns the ASCII value of the first character in a string.
 
- select ascii('a');
+ select ascii('a');
 
 company=# select ascii('a');
 
- ascii
+ ascii
 
 \-------
 
@@ -952,11 +975,11 @@ select reverse('hello');
 
 company=# select reverse('hello');
 
- reverse
+ reverse
 
 \---------
 
- olleh 
+ olleh 
 
 **Repeat:** Repeats a string a specified number of times.
 
@@ -966,10 +989,10 @@ select repeat('hell0',4);
 
 company=# select repeat('hell0',4);
 
-     repeat    
+     repeat    
 
 \----------------------
 
- hell0hell0hell0hell0
+ hell0hell0hell0hell0
 
 (1 row)
