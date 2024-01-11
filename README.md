@@ -33,7 +33,7 @@
 
 **3**.It is developed by the PostgresSQL Global development Group(a team of       volunteers).It is not controlled by any corporation or other private entity.
 
-**History of postgreSQL**
+# **History of postgreSQL**
 
 It was started in 1986 by professor Stonebreaker as a follow up project.PostgresSQL is now the most advanced open-source database available anywhere.
 
