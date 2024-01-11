@@ -126,7 +126,9 @@ Type "help" for help.
 ```
 
 **sudo**: This stands for "superuser do." It's like asking for special permission to do something important.
+
 **-u postgres**: This tells the system to pretend to be another user when running the following command.
+
 **psql**: This is the command to enter the PostgreSQL database. It's like opening a door to the database where you can talk to it and ask it to do things.
 
 **To see available list of database -**
