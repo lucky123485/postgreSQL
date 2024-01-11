@@ -196,7 +196,7 @@ postgres=#
 ```
 **DROP DATABASE:** This SQL command tells the database management system (DBMS) that you want to get rid of a database.
 
-**Table**-
+## Table ##
 
 In PostgreSQL, a table is like a virtual spreadsheet or a grid where you can organize and store information.
 Here are some simple terms to understand a table in PostgreSQL:
