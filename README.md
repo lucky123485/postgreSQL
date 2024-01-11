@@ -213,11 +213,14 @@ company=#
 **create table employee**:This is the new table name.
 
 **Id**: This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
-**Fname text not null**:This line creates a column named "fname.the `TEXT` data type is used to store character strings of any length
+
+**Fname text not null**:This line creates a column named "fname.the `TEXT` data type is used to store character strings of any length.
+
 **lname text not null**:This lines also creates a column “lname.
+
 **age int not null**:Creates a column for the age of the employee using the "int" data type.
 
-**To check list all tables in the current database:**
+**To check list all tables in the current database**:
 ```
 \d
 ```
@@ -226,22 +229,22 @@ company=#
 company=# \d
 List of relations
  Schema |   Name   | Type  |  Owner   
-\--------+----------+-------+----------
+--------+----------+-------+----------
  public | employee | table | postgres
 (1 row)
 ```
-**\d:**It's like a special instruction to ask PostgreSQL for details about database objects.
+**\d**:It's like a special instruction to ask PostgreSQL for details about database objects.
 
 **To list tables with additional details (columns, types, constraints):**
 ```
 \d tablename
 ```
-**Output:**
+**Output**-
 ```
 company=# \d employee;
            Table "public.employee"
  Column |  Type   | Collation | Nullable | Default
-\--------+---------+-----------+----------+---------
+--------+---------+-----------+----------+---------
  id | integer |       | not null |
  fname  | text |       | not null |
  lname  | text |       | not null |
@@ -249,16 +252,16 @@ company=# \d employee;
 Indexes:
 "employee\_pkey" PRIMARY KEY, btree (id)
 
-**If you want to exit the database-**
+**If you want to exit the database**:
 ```
 \q
 ```
 **Output**-
 ```
 company=# \q
-bhavesh\@bhavesh-HP-Laptop-15-da1xxx:\~$
+bhavesh@bhavesh-HP-Laptop-15-da1xxx:~$
 ```
-**\q:**it instructs PostgreSQL to exit the interactive session and return to the regular command prompt or shell.
+**\q**:it instructs PostgreSQL to exit the interactive session and return to the regular command prompt or shell.
 
 **Schema**-
 a schema in a database is like a folder that helps organize and categorize your data. Imagine you have a big cabinet, and inside it, you use different folders to keep things sorted. Each folder might contain related documents or items.
