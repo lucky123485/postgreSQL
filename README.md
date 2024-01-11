@@ -200,8 +200,11 @@ postgres=#
 
 In PostgreSQL, a table is like a virtual spreadsheet or a grid where you can organize and store information.
 Here are some simple terms to understand a table in PostgreSQL:
-**Rows**: Each row in the table is like a single entry or record. For example, if you have a table for "Students," each row could represent information about a specific student.
+
+**Rows**: Each row in the table is like a single entry or record. For example, if you have a table for "Students," each row could represent information about a specific student
+
 **Columns**: Columns are like categories or attributes for your data. In the "Students" table, you might have columns for "Name," "Age," and "Grade," where each column holds specific information about the students.
+
 **Cells**: Each intersection of a row and a column is a cell. It holds a single piece of data. For instance, the cell in the "Name" column and the first row might have the value "John."
 
 **Create Table**-
@@ -251,7 +254,7 @@ company=# \d employee;
  age | integer |       | not null |
 Indexes:
 "employee\_pkey" PRIMARY KEY, btree (id)
-
+```
 **If you want to exit the database**:
 ```
 \q
@@ -287,7 +290,9 @@ INSERT 0 1
 company=#
 ```
 **Insert into:** This statement is used in SQL to add new records (rows) into a table.
+
 **employee:** employee is the name of the table.
+
 **Values:** It indicates that you are about to provide the values for the columns.
 
 **Check insert value in the table**-
@@ -302,9 +307,11 @@ company=# select * from employee;
  1 | Rahul | Sharma |  28
 (1 row)
 ```
-**SELECT ***: This part instructs the database to retrieve all columns from the specified table.
+**SELECT**: This part instructs the database to retrieve all columns from the specified table.
+
 **FROM employee:** This part tells the database from which table it should retrieve the data. In this case, it's the "employee" table.
-**Select Keyword-**This is the SQL keyword that signals the start of a query to retrieve or fetch data use.
+
+**Select Keyword**-This is the SQL keyword that signals the start of a query to retrieve or fetch data use.
 
 **Fetch data from the table**-
 ```
@@ -329,11 +336,11 @@ company=# update employee set fname='lucky' where age=28;
 UPDATE 1
 company=#
 ```
-**UPDATE employee:** Specifies that you want to update data in the "employee" table.
+**UPDATE employee**: Specifies that you want to update data in the "employee" table.
 
-**SET fname**='lucky': Indicates the change you want to make. It says, "Set the value of the 'fname' (first name) column to 'lucky'."
+**SET fname**:'lucky': Indicates the change you want to make. It says, "Set the value of the 'fname' (first name) column to 'lucky'."
 
-**WHERE age=28:** Acts as a condition. It says, "Apply the update only to the rows where the 'age' column is equal to 28."
+**WHERE age=28**: Acts as a condition. It says, "Apply the update only to the rows where the 'age' column is equal to 28."
 
 **Delete data from table**-
 To delete data from a table, you use the DELETE statement.
@@ -346,8 +353,9 @@ company=# delete from employee where id=1;
 DELETE 1
 company=#
 ```
-**DELETE FROM employee:** Specifies that you want to delete data from the "employee" table.
-**WHERE id=1:** Acts as a condition. It says, "Delete the rows where the value in the 'id' column is equal to 1."
+**DELETE FROM employee**: Specifies that you want to delete data from the "employee" table.
+
+**WHERE id=1**: Acts as a condition. It says, "Delete the rows where the value in the 'id' column is equal to 1.
 
 **WHERE Clause**-it is used to provide conditions in SELECT, UPDATE, and DELETE statements to filter rows based on a specified condition.
 ```
@@ -361,7 +369,8 @@ id | fname | lname  | age
 1 | lucky | sharma |  28
 ```
 **SELECT * FROM employee:** Specifies that you want to retrieve data from the "employee" table. The `*` means you want to retrieve all columns.
-**WHERE age >= 28:** Acts as a condition. It says, "Retrieve only the rows where the value in the 'age' column is greater than or equal to 28."
+
+**WHERE age >= 28:** Acts as a condition. It says, "Retrieve only the rows where the value in the 'age' column is greater than or equal to 28.
 
 **ORDER BY Clause**- It is used in SELECT statements to sort the result set based on one or more columns. Like- asc desc.
 ```
@@ -396,13 +405,17 @@ company=# select * from employees;
 ```
  id |  fname  |  lname  | ages | salery
 
-**ALTER TABLE:- This phrase is used to modify an existing table structure.
-**employee:** This is the name of the table to which you want to make changes.
-**ADD COLUMN:** This specifies that you want to add a new column to the table.
-**salary:** This is the name of the new column that you want to add.
-**int:**`INT` stands for "integer," and it is a data type in databases used to store whole numbers.
+**ALTER TABLE**:- This phrase is used to modify an existing table structure
+.
+**employee**: This is the name of the table to which you want to make changes.
 
-**Rename column**- To rename a column, use the ALTER TABLE statement with the RENAME COLUMN clause.
+**ADD COLUMN**: This specifies that you want to add a new column to the table
+.
+**salary**: This is the name of the new column that you want to add.
+
+**int**:`INT` stands for "integer," and it is a data type in databases used to store whole numbers.
+
+**Rename column**: To rename a column, use the ALTER TABLE statement with the RENAME COLUMN clause.
 ```
 alter table employees rename salery to hours;
 ```
@@ -419,7 +432,6 @@ alter table employees rename to employee;
 **Output**-
 ```
 company=# alter table employees rename to employee;
-```
 ALTER TABLE
 company=# select * from employee;
 ```
@@ -497,7 +509,7 @@ company=# select avg(salery) from new_employee;
 avg     
 --------------------
 31750.000000000000
-
+```
 **Max**-Finds the highest value in a column.
 ```
 select max(salery) from new_employee;
@@ -533,30 +545,31 @@ count
 4
 (1 row)
 ```
-## User defined function-A user-defined function (UDF) is like a custom operation or calculation that you create in a database to perform a specific task.
+## User defined function##-
+A user-defined function (UDF) is like a custom operation or calculation that you create in a database to perform a specific task.
 
-**Triggers:**Triggers in databases are like automatic actions that get executed (e.g. insert,update,delete) when certain events (e.g.,changes to a table) occur,helping to maintain data integrity or perform additional tasks.
+**Triggers**:Triggers in databases are like automatic actions that get executed (e.g. insert,update,delete) when certain events (e.g.,changes to a table) occur,helping to maintain data integrity or perform additional tasks.
 
-**Alias:** Alias is like a nickname or a short name that you give to a column or a table in a query. It helps make your query results more readable and provides a way to reference columns or tables with a different name.
+**Alias**: Alias is like a nickname or a short name that you give to a column or a table in a query. It helps make your query results more readable and provides a way to reference columns or tables with a different name.
 ```
 select max(salery) as max_salery from new_employee;
 ```
 **Output**-
 ```
-company=# select max(salery) as max\_salery from new\_employee;
+company=# select max(salery) as max_salery from new_employee;
  max_salery
 ------------
  59000
 (1 row)
 ```
 
-**Index:** index is a database object that improves the speed of data retrieval operations on a table.
+**Index**: index is a database object that improves the speed of data retrieval operations on a table.
 ```
 create index new_student on new_employee("name");
 ```
-**Array:**An array is a data structure that stores a collection of elements of the same type.It allows you to group related pieces of data together under a single name.
+**Array**:An array is a data structure that stores a collection of elements of the same type.It allows you to group related pieces of data together under a single name.
 ```
-create table worker(id int not null,name text,salery integer\[],work\_hours text\[]\[]);
+create table worker(id int not null,name text,salery integer[],work_hours text[][]);
 ```
 **1d array (value access)**
 ```
@@ -570,13 +583,15 @@ select work_hours[1][1] from worker;
 ```
 create type mood as enum('sad','ok','happy');
 ```
-**Logical Operators-**
+**Logical Operators**-
 
 AND (logical AND)
+
 OR (logical OR)
+
 NOT (logical NOT)
 
-**And Operator:**And" is a logical operator used in programming and Boolean logic to combine two conditions. It returns true only if both conditions are true.
+**And Operator**:And" is a logical operator used in programming and Boolean logic to combine two conditions. It returns true only if both conditions are true.
 ```
  select * from student where name='rajnish' and age=33;
 ```
@@ -587,7 +602,7 @@ company=# select * from student where name='rajnish' and age=33;
 ----+---------+-----
   1 | rajnish |  33
 ```
-**OR Operator:**The OR operator is used to combine multiple conditions in a SQL statement. It returns true if at least one of the conditions joined by OR is true.
+**OR Operator**:The OR operator is used to combine multiple conditions in a SQL statement. It returns true if at least one of the conditions joined by OR is true.
 ```
 select * from student where name='shyam' or age=40;
 ```
@@ -599,12 +614,12 @@ company=# select * from student where name='shyam' or age=40;
 2 | shyam |  22
 (1 row)
 ```
-**Not:**Not" is a logical operator that reverses the truth value of a condition, turning true into false and false into true.
+**Not**:Not" is a logical operator that reverses the truth value of a condition, turning true into false and false into true.
 ```
 select * from student where name is not null;
 ```
 **Output**-
-
+```
 company=# select * from student where name is not null;
 id |  name   | age
 ----+---------+-----
@@ -614,7 +629,7 @@ id |  name   | age
 (3 rows)
 ```
 
-**Like operator:**Like" is a string comparison operator used in databases and programming that allows for pattern matching, often used in queries to search for a specified pattern within a text column.
+**Like operator**:Like" is a string comparison operator used in databases and programming that allows for pattern matching, often used in queries to search for a specified pattern within a text column.
 ```
 select * from student where name like 'ra%';
 ```
@@ -626,7 +641,7 @@ company=# select * from student where name like 'ra%';
 1 | rajnish |  33
 (1 row)
 ```
-**IN:** The IN operator checks if a specified value matches any value in a list.
+**IN**: The IN operator checks if a specified value matches any value in a list.
 ```
 select * from student where age in(33,22,22);
 ```
@@ -640,7 +655,7 @@ company=# select * from student where age in(33,22,22);
   3 | gaurav  |  22
 (3 rows)
 ```
-**NOT IN:** The NOT IN operator, as the name suggests, negates the condition of the IN operator. It checks if a specified value does not match any value in a list.
+**NOT IN**: The NOT IN operator, as the name suggests, negates the condition of the IN operator. It checks if a specified value does not match any value in a list.
 ```
 select * from student where age not in(21,67,45);
 ```
@@ -654,7 +669,7 @@ company=# select * from student where age not in(21,67,45);**
   3 | gaurav  |  22
 (3 rows)
 ```
-**Between Operator:**"Between" is an operator in programming and databases used to filter values within a specified range, inclusive of the endpoints.
+**Between Operator**:"Between" is an operator in programming and databases used to filter values within a specified range, inclusive of the endpoints.
 ```
 select * from student where age between 21 and 40;
 company=# select * from student where age between 21 and 40;
@@ -665,13 +680,13 @@ company=# select * from student where age between 21 and 40;
   3 | gaurav  |  22
 (3 rows)
 ```
-**String function-**
+**String function**-
 
 **concate:**"Concatenate" is an operation that combines two or more strings into a single string in programming and data manipulation.
 ```
 select concat('hello','world','hi');
 ```
-**Output-**
+**Output**-
 ```
 company=# select concat('hello','world','hi');
 concat    
@@ -679,7 +694,7 @@ concat
  helloworldhi
 (1 row)
 ```
-**Length:"**Length" is a function in programming and databases that returns the number of characters in a string or the number of elements in a collection, providing the size or length of the data.
+**Length**:Length" is a function in programming and databases that returns the number of characters in a string or the number of elements in a collection, providing the size or length of the data.
 ```
  select length('hello');
 ```
@@ -691,7 +706,7 @@ company=# select length('hello');
    5
 (1 row)
 ```
-**Lower:** Converts a string to lowercase.
+**Lower**: Converts a string to lowercase.
 ```
 select lower('HELLO');
 ```
@@ -701,15 +716,15 @@ company=# select lower('HELLO');
  lower
 -------
  helo 
-
-**Upper:** Converts a string to uppercase.
+```
+**Upper**: Converts a string to uppercase.
 ```
 company=# select upper('hello') as upparcase;
  upparcase
 -----------
  HELLO
 ```
-**Position:**Position" is a function in programming and databases that identifies the starting position of a substring within a string, helping to locate specific text or characters.
+**Position**:Position" is a function in programming and databases that identifies the starting position of a substring within a string, helping to locate specific text or characters.
 ```
 select position('ha' in 'bhavesh')
 ```
@@ -720,7 +735,7 @@ company=# select position('ha' in 'bhavesh');
 ----------
      2
 ```
-**Ascii:** Returns the ASCII value of the first character in a string.
+**Ascii**: Returns the ASCII value of the first character in a string.
 ```
  select ascii('a');
 company=# select ascii('a');
