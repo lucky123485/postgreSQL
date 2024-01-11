@@ -716,7 +716,7 @@ select lower('HELLO');
 company=# select lower('HELLO');
  lower
 -------
- helo 
+ hello 
 ```
 **Upper**: Converts a string to uppercase.
 ```
