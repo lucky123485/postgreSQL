@@ -8,11 +8,17 @@
   
  3. [Features of PostgreSQL](#features-of-postgresql)
 
-  4. [Setup PostgreSQL](#setup-postgresql)
-   
+ 4. [Setup PostgreSQL](#setup-postgresql)
 
+ 5. [Table](#table)
 
+ 6. [ Aggregate functions](#aggregate-functions)
+ 
+ 7. [User defined function](#user-defined-function)
+  
+ 8. [Logical Operators](#logical-operators)
 
+ 9. [String function](#string-function)
 # What is postgreSQL?
 
 * It is a powerful,open source object-Rational database management System(ORDBMS)
@@ -184,7 +190,7 @@ postgres=#
 ```
 **DROP DATABASE:** This SQL command tells the database management system (DBMS) that you want to get rid of a database.
 
-## Table ##
+# Table
 
 In PostgreSQL, a table is like a virtual spreadsheet or a grid where you can organize and store information.
 Here are some simple terms to understand a table in PostgreSQL:
@@ -474,7 +480,7 @@ select name,fname from student cross join employee;
 ```
 select employee.fname,employee.lname,student.name from employee full outer join student on employee.id=student.id;
 ```
-# Aggregate functions-
+# Aggregate functions
 In PostgreSQL, aggregate functions perform a calculation on a set of values and return a single result. Examples include SUM, AVG, COUNT, MAX, and MIN.
 
 **Sum**-Adds up all the values in a numeric column.
@@ -572,7 +578,7 @@ select work_hours[1][1] from worker;
 ```
 create type mood as enum('sad','ok','happy');
 ```
-# Logical Operators-
+# Logical Operators
 
 AND (logical AND)
 
@@ -669,7 +675,7 @@ company=# select * from student where age between 21 and 40;
   3 | gaurav  |  22
 (3 rows)
 ```
-# String function-
+# String function
 
 **concate:**"Concatenate" is an operation that combines two or more strings into a single string in programming and data manipulation.
 ```
