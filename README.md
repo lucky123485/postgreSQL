@@ -50,7 +50,7 @@ It was started in 1986 by professor Stonebreaker as a follow up project.Postgres
 **4.** In postgresql tables can be set to inherit their characteristics from a “parent” table.
 
 
-## **Setup PostgreSQL:**
+# **Setup PostgreSQL:**
 
 sudo apt update
 
