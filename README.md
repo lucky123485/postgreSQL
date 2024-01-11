@@ -155,11 +155,13 @@ employee | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
           |      |      |             |     |   |        |       | postgres=CTc/postgres
 ```
-**\ :** The backslash () commands are specific to the psql command-line tool and provide a convenient way to interact with the PostgreSQL database.
-**l :** This is a shorthand for the "list" command in psql.
+**\**:The backslash () commands are specific to the psql command-line tool and provide a convenient way to interact with the PostgreSQL database.
+
+**l**: This is a shorthand for the "list" command in psql.
 
 **Database**:A database is a structured collection of data that is organized and stored in a way that makes it easy to manage, retrieve, and update
-**Now we create database -**
+
+**Now we create database**-
 ```
 create database \<db name>;
 ```
