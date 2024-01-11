@@ -108,9 +108,9 @@ psql --version
 
 **Output**-
 ```
-bhavesh\@bhavesh-HP-Laptop-15-da1xxx:\~$ psql --version
+bhavesh@bhavesh-HP-Laptop-15-da1xxx:~$ psql --version
 psql (PostgreSQL) 16.1 (Ubuntu 16.1-1.pgdg22.04+1)
-bhavesh\@bhavesh-HP-Laptop-15-da1xxx:\~$
+bhavesh@bhavesh-HP-Laptop-15-da1xxx:~$
 ```
 
 **Access the PostgreSQL database management system as the PostgreSQL superuser.**
