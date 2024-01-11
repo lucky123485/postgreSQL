@@ -1,27 +1,15 @@
 # **PostgreSQL**<a id="docs-internal-guid-284870f4-7fff-2c24-7615-c3f2db4301e6"></a>
 
 # Table of Contents
-1. [Introduction to PostgreSQL](#introduction-to-postgresql)
-   - [What is PostgreSQL?](#what-is-postgresql)
-   - [History of PostgreSQL](#history-of-postgresql)
-   - [Features of PostgreSQL](#features-of-postgresql)
-2. [Setup PostgreSQL](#setup-postgresql)
-   - [Installation](#installation)
-   - [Checking PostgreSQL Version](#checking-postgresql-version)
-   - [Accessing PostgreSQL Database](#accessing-postgresql-database)
-   - [Creating and Managing Databases](#creating-and-managing-databases)
-3. [Tables and Schemas](#tables-and-schemas)
-   - [Creating Tables](#creating-tables)
-   - [Listing Tables](#listing-tables)
-   - [Inserting, Updating, and Deleting Data](#inserting-updating-and-deleting-data)
-4. [Views, Joins, and Functions](#views-joins-and-functions)
-   - [Views](#views)
-   - [Joins](#joins)
-   - [Aggregate Functions](#aggregate-functions)
-   - [User-Defined Functions and Triggers](#user-defined-functions-and-triggers)
-5. [Additional SQL Operations](#additional-sql-operations)
-   - [Indexes, Arrays, and Enumerations](#indexes-arrays-and-enumerations)
-   - [Logical Operators and String Functions](#logical-operators-and-string-functions)
+ 
+ 1. [What is PostgreSQL?](#what-is-postgresql)
+ 
+ 2. [History of PostgreSQL](#history-of-postgresql)
+  
+ 3. [Features of PostgreSQL](#features-of-postgresql)
+
+  4. [Setup PostgreSQL](#setup-postgresql)
+   
 
 
 
