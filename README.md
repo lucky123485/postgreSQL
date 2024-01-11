@@ -182,7 +182,7 @@ postgres=# \c company;
 You are now connected to database "company" as user "postgres".
 company=#
 ```
-**\c:** The `\c` command is a way of saying, "I want to connect to a different database." It's like walking into a different room to chat about a specific topic.
+**\c:** The \c command is a way of saying, "I want to connect to a different database." It's like walking into a different room to chat about a specific topic.
 
 **How to delete database**-
 ```
