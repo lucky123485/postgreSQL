@@ -266,7 +266,7 @@ bhavesh@bhavesh-HP-Laptop-15-da1xxx:~$
 ```
 **\q**:it instructs PostgreSQL to exit the interactive session and return to the regular command prompt or shell.
 
-**Schema**-
+# Schema-
 a schema in a database is like a folder that helps organize and categorize your data. Imagine you have a big cabinet, and inside it, you use different folders to keep things sorted. Each folder might contain related documents or items.
 
 **Create Schema**-
@@ -486,7 +486,8 @@ select name,fname from student cross join employee;
 ```
 select employee.fname,employee.lname,student.name from employee full outer join student on employee.id=student.id;
 ```
-**Aggregate functions**-In PostgreSQL, aggregate functions perform a calculation on a set of values and return a single result. Examples include SUM, AVG, COUNT, MAX, and MIN.
+# Aggregate functions-
+In PostgreSQL, aggregate functions perform a calculation on a set of values and return a single result. Examples include SUM, AVG, COUNT, MAX, and MIN.
 
 **Sum**-Adds up all the values in a numeric column.
 ```
@@ -545,7 +546,7 @@ count
 4
 (1 row)
 ```
-## User defined function##-
+# User defined function
 A user-defined function (UDF) is like a custom operation or calculation that you create in a database to perform a specific task.
 
 **Triggers**:Triggers in databases are like automatic actions that get executed (e.g. insert,update,delete) when certain events (e.g.,changes to a table) occur,helping to maintain data integrity or perform additional tasks.
@@ -583,7 +584,7 @@ select work_hours[1][1] from worker;
 ```
 create type mood as enum('sad','ok','happy');
 ```
-**Logical Operators**-
+# Logical Operators-
 
 AND (logical AND)
 
@@ -680,7 +681,7 @@ company=# select * from student where age between 21 and 40;
   3 | gaurav  |  22
 (3 rows)
 ```
-**String function**-
+# String function-
 
 **concate:**"Concatenate" is an operation that combines two or more strings into a single string in programming and data manipulation.
 ```
