@@ -91,8 +91,8 @@ postgresql
 0 upgraded, 1 newly installed, 0 to remove and 82 not upgraded.
 Need to get 68.9 kB of archives.
 After this operation, 73.7 kB of additional disk space will be used.
-Ign:1 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql all 16+256.pgdg22.04+1
-Get:1 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql all 16+256.pgdg22.04+1 \[68.9 kB]
+Ign:1 https://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql all 16+256.pgdg22.04+1
+Get:1 https://apt.postgresql.org/pub/repos/apt jammy-pgdg/main amd64 postgresql all 16+256.pgdg22.04+1 \[68.9 kB]
 Fetched 68.9 kB in 47s (1,462 B/s)    
 Selecting previously unselected package postgresql.
 (Reading database ... 229113 files and directories currently installed.)
