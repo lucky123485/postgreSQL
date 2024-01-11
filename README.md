@@ -3,9 +3,9 @@
 # Table of Contents
 1. [Introduction to PostgreSQL](#introduction-to-postgresql)
    - [What is PostgreSQL?](#what-is-postgresql)
-   - [History of PostgreSQL](#History-of-postgresql)
-   - [Features of PostgreSQL](#Features-of-PostgreSQL)
-2. [Setting up PostgreSQL](#Setting-up-PostgreSQL)
+   - [History of PostgreSQL](#history-of-postgresql)
+   - [Features of PostgreSQL](#features-of-postgresql)
+2. [Setting up PostgreSQL](#setting-up-postgresql)
    - [Installation](#installation)
    - [Checking PostgreSQL Version](#checking-postgresql-version)
    - [Accessing PostgreSQL Database](#accessing-postgresql-database)
