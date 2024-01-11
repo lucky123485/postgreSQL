@@ -52,24 +52,24 @@ sudo apt update
 
 **Output**-
 ```
-Hit:1 http\://packages.microsoft.com/repos/code stable InRelease                                                                                                                  
-Hit:2 http\://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                               
-Get:3 http\://security.ubuntu.com/ubuntu jammy-security InRelease \[110 kB]                                                                        
-Hit:4 https\://dl.google.com/linux/chrome/deb stable InRelease                                                                                    
-Get:5 http\://in.archive.ubuntu.com/ubuntu jammy-updates InRelease \[119 kB]                                                                                                      
-Hit:6 https\://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease                                                                                                             
-Hit:8 http\://in.archive.ubuntu.com/ubuntu jammy-backports InRelease         
-Get:7 https\://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu\_22.04  InRelease \[1,262 B]
-Ign:9 https\://pkg.jenkins.io/debian-stable binary/ InRelease    
-Hit:10 https\://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                     
-Err:11 http\://pkg.jenkins.io/debian-stable binary/ Release.gpg
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease                                                                                                                  
+Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                               
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease \[110 kB]                                                                        
+Hit:4 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                    
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease \[119 kB]                                                                                                      
+Hit:6 https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease                                                                                                             
+Hit:8 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease         
+Get:7 https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu\_22.04  InRelease \[1,262 B]
+Ign:9 https://pkg.jenkins.io/debian-stable binary/ InRelease    
+Hit:10 https://pkg.jenkins.io/debian-stable binary/ Release                                                                                                                     
+Err:11 http://pkg.jenkins.io/debian-stable binary/ Release.gpg
 The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 Fetched 230 kB in 7s (33.1 kB/s)
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 82 packages can be upgraded. Run 'apt list --upgradable' to see them.
-N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https\://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease' doesn't support architecture 'i386'
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease' doesn't support architecture 'i386'
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https\://pkg.jenkins.io/debian-stable binary/ Release: The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 W: Failed to fetch http\://pkg.jenkins.io/debian-stable/binary/Release.gpg  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 W: Some index files failed to download. They have been ignored, or old ones used instead**.**
