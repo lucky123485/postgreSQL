@@ -42,7 +42,7 @@ It was started in 1986 by professor Stonebreaker as a follow up project.Postgres
 * It runs on all major  as like -Linux,Unix and windows.
 * It supports text,image,sound,video and include interface for many language like-c,c++, java etc.
 * It supports a lot of features of sql like-complex sql queries,foreign    key,triggers,view,transations and concurrency etc.
-  In postgresql tables can be set to inherit their characteristics from a “parent” table.
+* In postgresql tables can be set to inherit their characteristics from a “parent” table.
 
 
 # Setup PostgreSQL:
@@ -71,7 +71,7 @@ Reading state information... Done
 82 packages can be upgraded. Run 'apt list --upgradable' to see them.
 N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease' doesn't support architecture 'i386'
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https\://pkg.jenkins.io/debian-stable binary/ Release: The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
-W: Failed to fetch http\://pkg.jenkins.io/debian-stable/binary/Release.gpg  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
+W: Failed to fetch http://pkg.jenkins.io/debian-stable/binary/Release.gpg  The following signatures couldn't be verified because the public key is not available: NO\_PUBKEY 5BA31D57EF5975CA
 W: Some index files failed to download. They have been ignored, or old ones used instead**.**
 ```
 ```
