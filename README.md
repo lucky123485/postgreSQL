@@ -120,7 +120,7 @@ sudo -u postgres psql
 
 **Output**
 ```
-\[sudo] password for bhavesh:
+[sudo] password for bhavesh:
 psql (16.1 (Ubuntu 16.1-1.pgdg22.04+1))
 Type "help" for help.
 ```
@@ -141,7 +141,7 @@ Type "help" for help.
 
 Name |  Owner   | Encoding | Locale Provider | Collate | Ctype | ICU Locale | ICU Rules |   Access privileges   
 
-\-------------+----------+----------+-----------------+---------+-------+------------+-----------+-----------------------
+-------------+----------+----------+-----------------+---------+-------+------------+-----------+-----------------------
 employee | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
  google  | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
  keenable | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
@@ -162,7 +162,7 @@ employee | postgres | UTF8 | libc        | en\_IN   | en\_IN |        |       |
 
 **Now we create database**-
 ```
-create database \<db name>;
+create database <db name>;
 ```
 **Output-**
 ```
@@ -174,9 +174,9 @@ CREATE DATABASE
 
 **To Switch other database-**
 ```
- \c\<db name>
+ \c <db name>
 ```
-**Output-**
+**Output**-
 ```
 postgres=# \c company;
 You are now connected to database "company" as user "postgres".
@@ -184,9 +184,9 @@ company=#
 ```
 **\c:** The `\c` command is a way of saying, "I want to connect to a different database." It's like walking into a different room to chat about a specific topic.
 
-**How to delete database-**
+**How to delete database**-
 ```
-Drop database\<db name>
+Drop database <db name>
 ```
 **Output-**
 ```
@@ -196,7 +196,7 @@ postgres=#
 ```
 **DROP DATABASE:** This SQL command tells the database management system (DBMS) that you want to get rid of a database.
 
-**Table-**
+**Table**-
 
 In PostgreSQL, a table is like a virtual spreadsheet or a grid where you can organize and store information.
 Here are some simple terms to understand a table in PostgreSQL:
@@ -204,14 +204,15 @@ Here are some simple terms to understand a table in PostgreSQL:
 **Columns**: Columns are like categories or attributes for your data. In the "Students" table, you might have columns for "Name," "Age," and "Grade," where each column holds specific information about the students.
 **Cells**: Each intersection of a row and a column is a cell. It holds a single piece of data. For instance, the cell in the "Name" column and the first row might have the value "John."
 
-**Create Table-**
+**Create Table**-
 ```
 company=# create table employee(id int not null primary key,fname text not null,lname text not null,age int not null);
 CREATE TABLE
-company=**#**
+company=#
 ```
 **create table employee**:This is the new table name.
-**Id:** This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
+
+**Id**: This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
 **Fname text not null**:This line creates a column named "fname.the `TEXT` data type is used to store character strings of any length
 **lname text not null**:This lines also creates a column “lname.
 **age int not null**:Creates a column for the age of the employee using the "int" data type.
