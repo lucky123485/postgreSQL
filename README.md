@@ -5,7 +5,7 @@
    - [What is PostgreSQL?](#what-is-postgresql)
    - [History of PostgreSQL](#history-of-postgresql)
    - [Features of PostgreSQL](#features-of-postgresql)
-2. [Setting up PostgreSQL](#setting-up-postgresql)
+2. [Setup PostgreSQL](#setup-postgresql)
    - [Installation](#installation)
    - [Checking PostgreSQL Version](#checking-postgresql-version)
    - [Accessing PostgreSQL Database](#accessing-postgresql-database)
