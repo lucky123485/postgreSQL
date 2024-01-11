@@ -39,7 +39,7 @@ It was started in 1986 by professor Stonebreaker as a follow up project.Postgres
 
                                          
 
-**Features of postgreSQL?**
+# **Features of postgreSQL?**
 
  **1.** It runs on all major  as like -Linux,Unix and windows
 
