@@ -460,23 +460,84 @@ select * from new_student;
 ```
 select employee.fname,employee.lname,student.name from employee inner join student on employee.id=student.id;
 ```
+**Output**
+```
+company=# select employee.fname,employee.lname,student.name from employee inner join student on employee.id=student.id;
+ fname  |  lname  |  name   
+--------+---------+---------
+ lucky  | sharma  | rajnish
+ rahul  | kaushik | shyam
+ neeraj | garg    | gaurav
+```
 
 **Left join**-In a left join, all records from the left table are included, and matching records from the right table are added, with non-matching values replaced by NULLs.
 ```
 select employee.fname,employee.lname,student.name from employee left join student on employee.id=student.id;
 ```
+**Output**
+```
+company=# select employee.fname,employee.lname,student.name from employee left join student on employee.id=student.id;
+  fname  |  lname  |  name   
+---------+---------+---------
+ lucky   | sharma  | rajnish
+ rahul   | kaushik | shyam
+ neeraj  | garg    | gaurav
+ brijesh | yadav   | 
+(4 rows)
+```
+
 **Right join**-In a right join, all records from the right table are included, and matching records from the left table are added, with non-matching values replaced by NULLs.
 ```
 select employee.fname,employee.lname,student.name from employee right join student on employee.id=student.id;
+
+**Output**
 ```
+company=# select employee.fname,employee.lname,student.name from employee right join student on employee.id=student.id;
+ fname  |  lname  |  name   
+--------+---------+---------
+ lucky  | sharma  | rajnish
+ rahul  | kaushik | shyam
+ neeraj | garg    | gaurav
+(3 rows)
+```
+
 **Cross join**-In a cross join, every row from the first table is combined with every row from the second table, creating all possible combinations.
 ```
-select name,fname from student cross join employee;
+select employee.fname,student.name from employee cross join student;
+```
+**Output**
+```
+  fname  |  name   
+---------+---------
+ lucky   | rajnish
+ rahul   | rajnish
+ neeraj  | rajnish
+ brijesh | rajnish
+ lucky   | shyam
+ rahul   | shyam
+ neeraj  | shyam
+ brijesh | shyam
+ lucky   | gaurav
+ rahul   | gaurav
+ neeraj  | gaurav
+ brijesh | gaurav
+(12 rows)
 ```
 
 **Full outer join**- A FULL OUTER JOIN returns all rows when there is a match in either the left or the right table. If there is no match, NULL values are returned for columns from the table without a match.
 ```
 select employee.fname,employee.lname,student.name from employee full outer join student on employee.id=student.id;
+```
+**Output**
+```
+company=# select employee.fname,employee.lname, student.name from employee full outer join student on employee.id=student.id;
+  fname  |  lname  |  name   
+---------+---------+---------
+ lucky   | sharma  | rajnish
+ rahul   | kaushik | shyam
+ neeraj  | garg    | gaurav
+ brijesh | yadav   | 
+(4 rows)
 ```
 # Aggregate functions
 In PostgreSQL, aggregate functions perform a calculation on a set of values and return a single result. Examples include SUM, AVG, COUNT, MAX, and MIN.
@@ -496,7 +557,7 @@ sum
 ```
 select avg(salery) from new_employee;
 ```
-**Output**-
+**Output**
 ```
 company=# select avg(salery) from new_employee;
 avg     
