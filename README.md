@@ -363,7 +363,7 @@ id | fname | lname  | age
 ----+-------+--------+-----
 1 | lucky | sharma |  28
 ```
-**SELECT * FROM employee:** Specifies that you want to retrieve data from the "employee" table. The `*` means you want to retrieve all columns.
+**SELECT * FROM employee:** Specifies that you want to retrieve data from the "employee" table. The * means you want to retrieve all columns.
 
 **WHERE age >= 28:** Acts as a condition. It says, "Retrieve only the rows where the value in the 'age' column is greater than or equal to 28.
 
