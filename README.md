@@ -417,18 +417,18 @@ alter table employees add column salery int;
 **Output**-
 ```
 company=# select * from employees;
-```
  id |  fname  |  lname  | ages | salery
+```
 
-**ALTER TABLE**:- This phrase is used to modify an existing table structure
-.
+**ALTER TABLE**: This phrase is used to modify an existing table structure
+
 **employee**: This is the name of the table to which you want to make changes.
 
 **ADD COLUMN**: This specifies that you want to add a new column to the table
-.
+
 **salary**: This is the name of the new column that you want to add.
 
-**int**:`INT` stands for "integer," and it is a data type in databases used to store whole numbers.
+**int**:INT stands for integer and it is a data type in databases used to store whole numbers.
 
 **Rename column**: To rename a column, use the ALTER TABLE statement with the RENAME COLUMN clause.
 ```
