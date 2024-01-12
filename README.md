@@ -247,7 +247,7 @@ company=# \d employee;
  lname  | text |       | not null |
  age | integer |       | not null |
 Indexes:
-"employee\_pkey" PRIMARY KEY, btree (id)
+"employee_pkey" PRIMARY KEY, btree (id)
 ```
 **If you want to exit the database**:
 ```
@@ -265,7 +265,7 @@ a schema in a database is like a folder that helps organize and categorize your 
 
 **Create Schema**-
 ```
-Create schema\<schema name>
+Create schema<schema name>
 ```
 **Output**-
 ```
