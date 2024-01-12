@@ -456,6 +456,7 @@ create view new_employee as select fname,ages from employee;
 ```
 select * from new_student;
 ```
+
 **Inner join\simple join**-A JOIN in PostgreSQL is used to combine rows from two or more tables based on a related column between them.
 ```
 select employee.fname,employee.lname,student.name from employee inner join student on employee.id=student.id;
@@ -474,6 +475,7 @@ company=# select employee.fname,employee.lname,student.name from employee inner 
 ```
 select employee.fname,employee.lname,student.name from employee left join student on employee.id=student.id;
 ```
+
 **Output**
 ```
 company=# select employee.fname,employee.lname,student.name from employee left join student on employee.id=student.id;
@@ -489,7 +491,7 @@ company=# select employee.fname,employee.lname,student.name from employee left j
 **Right join**-In a right join, all records from the right table are included, and matching records from the left table are added, with non-matching values replaced by NULLs.
 ```
 select employee.fname,employee.lname,student.name from employee right join student on employee.id=student.id;
-
+```
 **Output**
 ```
 company=# select employee.fname,employee.lname,student.name from employee right join student on employee.id=student.id;
