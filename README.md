@@ -4,28 +4,26 @@
  
  1. [What is PostgreSQL?](#what-is-postgresql)
  
- 2. [History of PostgreSQL](#history-of-postgresql)
-  
- 3. [Features of PostgreSQL](#features-of-postgresql)
+ 2. [Features of PostgreSQL](#features-of-postgresql)
 
- 4. [Setup PostgreSQL](#setup-postgresql)
+ 3. [Setup PostgreSQL](#setup-postgresql)
 
- 5. [Table](#table)
+ 4. [Table](#table)
 
- 6. [ Aggregate functions](#aggregate-functions)
+ 5. [ Aggregate functions](#aggregate-functions)
  
- 7. [User defined function](#user-defined-function)
+ 6. [User defined function](#user-defined-function)
   
- 8. [Logical Operators](#logical-operators)
+ 7. [Logical Operators](#logical-operators)
 
- 9. [String function](#string-function)
+ 8. [String function](#string-function)
 # What is postgreSQL?
 
 * It is a powerful,open source object-Rational database management System(ORDBMS)
 * It is used to store data securely
 * It is developed by the PostgresSQL Global development Group(a team of volunteers).It is not controlled by any corporation or other private entity.
 
-# History of postgreSQL
+**History of postgreSQL**
 
 It was started in 1986 by professor Stonebreaker as a follow up project.PostgresSQL is now the most advanced open-source database available anywhere.
 
