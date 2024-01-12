@@ -164,6 +164,7 @@ postgres=# create database company;
 CREATE DATABASE
 ```
 **CREATE DATABASE:** This is the SQL command used to instruct the database management system (DBMS) to create a new database.
+
 **company:** This is the database name.
 
 **To Switch other database-**
