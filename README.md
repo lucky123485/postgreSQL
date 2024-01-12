@@ -17,6 +17,8 @@
  7. [Logical Operators](#logical-operators)
 
  8. [String function](#string-function)
+
+ 9. [Reference link](#reference-link)
 # What is postgreSQL?
 
 * It is a powerful,open source object-Rational database management System(ORDBMS)
@@ -381,12 +383,33 @@ company=# select * from employee order by age asc;
 ```
 **Group by clause**-It is used to change a particular field or data in group and show the other table form
 ```
-select fname,sum(age) from employee group by fname;
+select fname,sum(salery) from employee group by fname;
 ```
+**Output**
+```
+company=# select fname,sum(salery) from employee group by fname;
+ fname |  sum  
+-------+-------
+ rahul | 45000
+ shyam |  5000
+ lucky | 25000
+(3 rows)
+```
+
 **HAVING Clause**-It is used to provide a condition and SELECT statements with GROUP BY to filter grouped rows based on a condition.
 ```
-select fname from employee group by fname having count(fname)=1;
+select fname from employee group by fname having count(fname)>=2;
 ```
+**Output**
+```
+company=# select fname from employee group by fname having count(fname)>=2;
+ fname 
+-------
+ rahul
+ lucky
+(2 rows)
+```
+
 **Add a column to a table**-To add a new column to an existing table, you use the ALTER TABLE statement.
 ```
 alter table employees add column salery int;
@@ -820,3 +843,7 @@ company=# select repeat('hell0',4);
 ----------------------
  hell0hell0hell0hell0
 ```
+# Reference link
+https://chat.openai.com/
+
+https://www.youtube.com/watch?v=4G7JkF_e5LM&list=PLzAy3QBHoWZdxPXkD7UVymWm_Do3IdzwQ
