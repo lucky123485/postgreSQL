@@ -209,13 +209,13 @@ company=#
 ```
 **create table employee**:This is the new table name.
 
-**Id**: This line defines a column named "id" with the data type "int" (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
+**Id**: This line defines a column named "id" with the data type int (integer). The "not null" constraint means that this column must always have a value.A primary key ensures that each value in the designated column(s) is unique.
 
-**Fname text not null**:This line creates a column named "fname.the `TEXT` data type is used to store character strings of any length.
+**Fname text not null**:This line creates a column named fname.the TEXT data type is used to store character strings of any length.
 
-**lname text not null**:This lines also creates a column “lname.
+**lname text not null**:This lines also creates a column lname.
 
-**age int not null**:Creates a column for the age of the employee using the "int" data type.
+**age int not null**:Creates a column for the age of the employee using the int data type.
 
 **To check list all tables in the current database**:
 ```
